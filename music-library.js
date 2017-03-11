@@ -23,7 +23,6 @@ Playlist.prototype.overallRating = function() {
     return prev + curr;
   }, 0);
   let avgRating = sumRatings/ratings.length;
-  // console.log('overall rating', avgRating);
   return avgRating;
 }
 
@@ -34,25 +33,23 @@ Playlist.prototype.totalDuration = function() {
   let totalDuration = durations.reduce((prev, curr) => {
     return prev + curr;
   }, 0);
-  // console.log('total duration is', totalDuration);
   return totalDuration;
 }
 
 let musicLibrary = new Library('firstLib', 'cool guy');
-// console.log('Library: ', musicLibrary);
 
 let myPlaylist1 = new Playlist('pl1');
 musicLibrary.playlists.push(myPlaylist1);
-
-
-// console.log('Library after: ', musicLibrary);
 
 let track1 = new Track("t1", 5, 300);
 let track2 = new Track("t2", 2, 240);
 myPlaylist1.tracks.push(track1);
 myPlaylist1.tracks.push(track2);
-console.log("my first playlist", myPlaylist1);
 
 
-myPlaylist1.overallRating();
-myPlaylist1.totalDuration();
+//Testing codes
+// console.log("My Music Library ==> ", musicLibrary);
+// console.log("\n");
+// console.log("My Playlist 1 ==> ", myPlaylist1 );
+// console.log("\n");
+// console.log("Overall Rating " + myPlaylist1.overallRating() + ", Total Duration " + myPlaylist1.totalDuration());
